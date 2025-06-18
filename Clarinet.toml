@@ -1,0 +1,23 @@
+[project]
+name = "radiant-pledge-ecosystem"
+authors = []
+description = ""
+telemetry = true
+requirements = []
+cache_dir = "/home/runner/workspace/radiant-pledge-ecosystem/./.requirements"
+boot_contracts = ["pox", "costs-v2", "bns"]
+[contracts.radiant-pledge-ecosystem]
+path = "contracts/radiant-pledge-ecosystem.clar"
+
+[repl]
+costs_version = 2
+parser_version = 2
+
+[repl.analysis]
+passes = ["check_checker"]
+
+[repl.analysis.check_checker]
+strict = false
+trusted_sender = false
+trusted_caller = false
+callee_filter = false
